@@ -1,0 +1,55 @@
+/* .main {
+    margin-top: 5rem;
+} */
+
+.main-row {
+    margin-top: 5rem;
+}
+
+.carousel {
+    overflow: hidden;
+    height: 16rem;
+    border-radius: .3rem;
+    box-sizing: border-box;
+}
+
+.carousel img{
+    width: 100%;
+}
+
+.bread {
+    height: 50px;
+}
+
+.main-left-content {
+    background-color: #fff;
+    margin-top: 1.7rem;
+    height: 24rem;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+
+}
+
+.main-right {
+    background-color: #fff;
+    height: 25rem;
+    margin-left: 1.7rem;
+    padding:.3rem;
+    border-radius: .3rem;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+}
+
+.main-left-footer {
+    height: 10rem;
+    background-color:#f9f9f9;
+}
+
+.test {
+    height:200px;
+    width: 300px;
+    border: 2px solid red;
+    overflow: hidden;
+}
+
+.test img {
+    height: 100%;
+}

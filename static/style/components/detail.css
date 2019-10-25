@@ -1,0 +1,21 @@
+
+
+.detail-row {
+    margin-top: 5rem;
+}
+
+.detail-left-content {
+    background-color: #fff;
+    height: 50rem;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+
+}
+
+.detail-right {
+    background-color: #fff;
+    height: 25rem;
+    margin-left: 1.7rem;
+    padding:.3rem;
+    border-radius: .3rem;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+}

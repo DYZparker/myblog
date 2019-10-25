@@ -1,0 +1,15 @@
+
+
+.subject {
+    background-color: #fff;
+    margin-top: 1.7rem;
+    height: 24rem;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.subject-tabs-tabpane {
+    display: flex;
+    justify-content: space-around;
+}

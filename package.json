@@ -12,11 +12,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@blunck/next-md": "^1.0.0",
     "@zeit/next-css": "^1.0.1",
     "antd": "^3.24.2",
     "babel-plugin-import": "^1.12.2",
+    "highlight.js": "^9.15.10",
+    "html-loader": "^0.5.5",
+    "lodash": "^4.17.15",
+    "markdown-loader": "^5.1.0",
+    "markdown-navbar": "^1.0.7",
+    "marked": "^0.7.0",
     "next": "^9.1.1",
     "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react-dom": "^16.11.0",
+    "react-markdown": "^4.2.2"
   }
 }

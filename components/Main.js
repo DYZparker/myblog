@@ -1,6 +1,6 @@
 import React from 'react'
 import '../static/style/components/main.css'
-import { Row, Col, Menu, Icon, Carousel, Breadcrumb   } from 'antd'
+import { Row, Col, Carousel  } from 'antd'
 import Subject from './Subject'
 import Articlelist from './Articlelist'
 import Author from './Author'
@@ -26,7 +26,7 @@ const Main = () => (
             </Col>
             <Col className="main-right" xs={0} sm={0} md={0} lg={5} xl={4}>
                 <Author />
-                <Sidenav />
+                {/* <Sidenav /> */}
                 <div>hi</div>
             </Col>
         </Row>

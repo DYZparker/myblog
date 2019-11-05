@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import '../static/style/components/header.css'
 import { Row, Col, Menu, Icon } from 'antd'
+import axios from 'axios'
 
 const { SubMenu } = Menu
 
@@ -13,12 +14,17 @@ const Header = () => {
           current: e.key
         })
     }
+    const handle = async () => {
+        await axios.get('http://localhost:3000/users').then((res) => {
+            console.log(res)
+        })
+    }
 
     return (
         <div className="header">
             <Row type="flex" justify="center">
                 <Col xs={24} sm={24} md={10} lg={15} xl={10}>
-                    <span className="header-title"><a>云中的博客</a></span>
+                    <span className="header-title" onClick={handle}><a>云中的博客</a></span>
                 </Col>
                 <Col xs={0} sm={0} md={14} lg={8} xl={8}>
                     <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">

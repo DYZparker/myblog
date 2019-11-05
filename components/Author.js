@@ -1,6 +1,6 @@
 import React from 'react'
 import '../static/style/components/author.css'
-import { Row, Col, Menu, Icon, Avatar, Divider } from 'antd'
+import { Icon, Avatar, Divider } from 'antd'
 
 const Author = () => (
     <div className="autor">

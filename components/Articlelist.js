@@ -1,6 +1,6 @@
 import React from 'react'
 import '../static/style/components/articlelist.css'
-import { Row, Col, Menu, Icon, Avatar, Divider, List } from 'antd'
+import { Icon, Avatar, List } from 'antd'
 
 const listData = [];
 for (let i = 0; i < 23; i++) {

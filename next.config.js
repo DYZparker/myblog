@@ -11,3 +11,13 @@ module.exports = withMarkdown(withCss({}))
 //     withCss({}),
 //     withMarkdown()
 // }
+// const withMarkdown = require('@blunck/next-md')({
+//     markdownLoaderOptions: {
+//         gfm: true
+//     },
+//     htmlLoaderOptions: {
+//         minimize: true,
+//         conservativeCollapse: false
+//     }
+// })
+// module.exports = withMarkdown()

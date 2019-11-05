@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
+import React from 'react'
 import '../static/style/components/sidenav.css'
-import { Row, Col, Menu, Icon, Avatar, Divider } from 'antd'
+import { Menu, Icon, Divider } from 'antd'
 
 const { SubMenu } = Menu
 

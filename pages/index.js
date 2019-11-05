@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import Main from '../components/Main'
 import { Divider, BackTop, Icon } from 'antd'
 
-// import 'antd/dist/antd.css'
+import 'antd/dist/antd.css'
 import '../static/style/pages/comm.css'
 
 

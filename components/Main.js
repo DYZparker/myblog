@@ -4,7 +4,7 @@ import { Row, Col, Carousel  } from 'antd'
 import Subject from './Subject'
 import Articlelist from './Articlelist'
 import Author from './Author'
-import Sidenav from './Sidenav'
+// import Sidenav from './Sidenav'
 
 const Main = () => (
     <div className="main">

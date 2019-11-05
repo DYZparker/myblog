@@ -1,6 +1,6 @@
 import React from 'react'
 import '../static/style/components/subject.css'
-import { Row, Col, Menu, Icon, Avatar, Divider, Tabs, Card, List } from 'antd'
+import { Avatar, Tabs, Card, List } from 'antd'
 
 const { TabPane } = Tabs
 const { Meta } = Card
@@ -30,7 +30,7 @@ const Subject = () => (
             <Card
                 hoverable
                 style={{ width: 160 }}
-                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+                cover={<img alt="example" src="../static/image/html.png" />}
             >
                 <Meta title="Europe Street beat" description="www.instagram.com" />
             </Card>
@@ -48,22 +48,118 @@ const Subject = () => (
                 )}
             />
             </TabPane>
-            <TabPane tab="JavaScript" key="2">
-                Content of Tab Pane 2
+            <TabPane className="subject-tabs-tabpane" tab="JavaScript" key="2">
+            <Card
+                hoverable
+                style={{ width: 160 }}
+                cover={<img alt="example" src="../static/image/js.png" />}
+            >
+                <Meta title="Europe Street beat" description="www.instagram.com" />
+            </Card>
+            <List
+                itemLayout="horizontal"
+                dataSource={data}
+                renderItem={item => (
+                <List.Item>
+                    <List.Item.Meta
+                    avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                    title={<a href="https://ant.design">{item.title}</a>}
+                    description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+                    />
+                </List.Item>
+                )}
+            />
             </TabPane>
-            <TabPane tab="Node" key="3">
-                Content of Tab Pane 3
+            <TabPane className="subject-tabs-tabpane" tab="Node" key="3">
+            <Card
+                hoverable
+                style={{ width: 160 }}
+                cover={<img alt="example" src="../static/image/node.png" />}
+            >
+                <Meta title="Europe Street beat" description="www.instagram.com" />
+            </Card>
+            <List
+                itemLayout="horizontal"
+                dataSource={data}
+                renderItem={item => (
+                <List.Item>
+                    <List.Item.Meta
+                    avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                    title={<a href="https://ant.design">{item.title}</a>}
+                    description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+                    />
+                </List.Item>
+                )}
+            />
             </TabPane>
-            <TabPane tab="Vue" key="4">
-                Content of Tab Pane 1
+            <TabPane className="subject-tabs-tabpane" tab="Vue" key="4">
+            <Card
+                hoverable
+                style={{ width: 160 }}
+                cover={<img alt="example" src="../static/image/vue.png" />}
+            >
+                <Meta title="Europe Street beat" description="www.instagram.com" />
+            </Card>
+            <List
+                itemLayout="horizontal"
+                dataSource={data}
+                renderItem={item => (
+                <List.Item>
+                    <List.Item.Meta
+                    avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                    title={<a href="https://ant.design">{item.title}</a>}
+                    description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+                    />
+                </List.Item>
+                )}
+            />
             </TabPane>
-            <TabPane tab="React" key="5">
-                Content of Tab Pane 2
+            <TabPane className="subject-tabs-tabpane" tab="React" key="5">
+            <Card
+                hoverable
+                style={{ width: 160 }}
+                cover={<img alt="example" src="../static/image/react.png" />}
+            >
+                <Meta title="Europe Street beat" description="www.instagram.com" />
+            </Card>
+            <List
+                itemLayout="horizontal"
+                dataSource={data}
+                renderItem={item => (
+                <List.Item>
+                    <List.Item.Meta
+                    avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                    title={<a href="https://ant.design">{item.title}</a>}
+                    description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+                    />
+                </List.Item>
+                )}
+            />
             </TabPane>
-            <TabPane tab="Other" key="6">
-                Content of Tab Pane 3
+            <TabPane className="subject-tabs-tabpane" tab="Other" key="6">
+            <Card
+                hoverable
+                style={{ width: 160 }}
+                cover={<img alt="example" src="../static/image/web.png" />}
+            >
+                <Meta title="Europe Street beat" description="www.instagram.com" />
+            </Card>
+            <List
+                itemLayout="horizontal"
+                dataSource={data}
+                renderItem={item => (
+                <List.Item>
+                    <List.Item.Meta
+                    avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                    title={<a href="https://ant.design">{item.title}</a>}
+                    description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+                    />
+                </List.Item>
+                )}
+            />
             </TabPane>
         </Tabs>
+        
     </div>
 )
 

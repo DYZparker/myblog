@@ -8,20 +8,13 @@ import Author from './Author'
 // import Sidenav from './Sidenav'
 // import MarkNav from 'markdown-navbar';
 import 'markdown-navbar/dist/navbar.css'
+import axios from 'axios'
 
-import appMarkdown from '../static/md/react.md'
-
-// const readmePath  = require('../static/md/sb.md')
-// fetch(readmePath)
-//     .then(response => {
-//       return response.text()
-//     })
-//     .then(text => {
-//         console.log(text)
-//     })
+import appMarkdown from '../static/md/koa2.md'
 
 
 const Detail = () => {
+
     const renderer = new marked.Renderer();
     marked.setOptions({
         renderer: renderer, 
@@ -46,7 +39,6 @@ const Detail = () => {
                     <div className="detail-article">
                         <div className="detail-article-title">title</div>
                         <div className="detail-article-content" dangerouslySetInnerHTML = {{__html:html}}></div>
-                        {/* <Test></Test> */}
                     </div>
                 </Col>
                 <Col className="detail-right" xs={0} sm={0} md={0} lg={5} xl={4}>

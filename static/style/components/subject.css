@@ -11,5 +11,13 @@
 
 .subject-tabs-tabpane {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+}
+
+.subject-tabs-card {
+    margin: 0 1.5rem;
+}
+
+.subject-tabs-card-meta {
+    text-align: center;
 }

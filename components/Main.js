@@ -4,7 +4,7 @@ import { Row, Col, Carousel  } from 'antd'
 import Subject from './Subject'
 import Articlelist from './Articlelist'
 import Author from './Author'
-// import Sidenav from './Sidenav'
+import Sidetag from './Sidetag'
 
 const Main = () => (
     <div className="main">
@@ -26,8 +26,7 @@ const Main = () => (
             </Col>
             <Col className="main-right" xs={0} sm={0} md={0} lg={5} xl={4}>
                 <Author />
-                {/* <Sidenav /> */}
-                <div>hi</div>
+                <Sidetag />
             </Col>
         </Row>
     </div>

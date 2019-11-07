@@ -1,163 +1,189 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Link from 'next/link'
 import '../static/style/components/subject.css'
 import { Avatar, Tabs, Card, List } from 'antd'
 
 const { TabPane } = Tabs
 const { Meta } = Card
-const data = [
+const subList = [
     {
-      title: 'Ant Design Title 1',
+        id: 1,
+        title: 'html',
+        img: 'html.png',
+        description: 'www.w3school.com.cn',
+        child: [
+            {
+              title: 'html',
+              description: 'HTML为超文本标记语言，是由HTML命令组成的描述性文本'
+            },
+            {
+              title: 'css',
+              description: '层叠样式表是一种用来表现HTML或XML等文件样式的计算机语言'
+            },
+            {
+              title: '定位&布局',
+              description: 'position&display&flex'
+            },
+            {
+              title: '变形&动画',
+              description: 'transition&transform&animation'
+            }
+        ]
     },
     {
-      title: 'Ant Design Title 2',
+        id: 2,
+        title: 'javascript',
+        img: 'js.png',
+        description: 'www.javascript.com',
+        child: [
+            {
+              title: 'javascript',
+              description: 'JavaScript是一种用于客户端的直译式脚本语言'
+            },
+            {
+              title: 'ES6',
+              description: '描述了javascript的语法和基本对象'
+            },
+            {
+              title: 'BOM',
+              description: 'BOM由多个对象组成，其中代表浏览器窗口的Window对象是BOM的顶层对象'
+            },
+            {
+              title: 'DOM',
+              description: 'DOM即文档对象模型，是一种处理HTML和XML文件的标准API'
+            }
+        ]
     },
     {
-      title: 'Ant Design Title 3',
+        id: 3,
+        title: 'node',
+        img: 'node.png',
+        description: 'www.nodejs.org',
+        child: [
+            {
+              id: 3-1,
+              title: 'node',
+              description: '是一个基于Chrome V8引擎的JavaScript运行环境,使用了一个事件驱动、非阻塞式 I/O 的模型'
+            },
+            {
+              id: 3-2,
+              title: 'express',
+              description: '是一个简洁而灵活的 node.js Web应用框架'
+            },
+            {
+              id: 3-3,
+              title: 'koa2',
+              description: '是express的升级版'
+            },
+            {
+              id: 3-4,
+              title: 'egg',
+              description: '在koa2的基础上集成，添加规范'
+            }
+        ]
     },
     {
-      title: 'Ant Design Title 4',
+        id: 4,
+        title: 'vue',
+        img: 'vue.png',
+        description: 'www.cn.vuejs.org',
+        child: [
+            {
+              title: 'vue',
+              description: '是一套用于构建用户界面自底向上逐层应用的渐进式框架'
+            },
+            {
+              title: 'vue router',
+              description: 'Vue Router 是 Vue.js 官方的路由管理器'
+            },
+            {
+              title: 'vuex',
+              description: 'Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式'
+            }
+        ]
     },
-  ]
+    {
+        id: 5,
+        title: 'react',
+        img: 'react.png',
+        description: 'www.reactjs.org',
+        child: [
+            {
+              title: 'react',
+              description: '是用于构建用户界面的 JavaScript 库'
+            },
+            {
+              title: 'hook',
+              description: '可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性'
+            },
+            {
+              title: 'next.js',
+              description: 'Next.js 是一个轻量级的 React 服务端渲染应用框架'
+            }
+        ]
+    },
+    {
+        id: 6,
+        title: 'other',
+        img: 'web.png',
+        description: 'www.w3school.com.cn',
+        child: [
+            {
+              title: 'git',
+              description: 'Git是一个开源的分布式版本控制系统'
+            },
+            {
+              title: 'mongodb',
+              description: 'MongoDB 是一个基于分布式文件存储的数据库'
+            },
+            {
+              title: 'mysql',
+              description: 'MySQL是一个关系型数据库管理系统'
+            },
+            {
+              title: 'nginx',
+              description: '是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP/POP3/SMTP服务'
+            }
+        ]
+    }
+]
 
 function callback(key) {
     console.log(key);
   }
 
 const Subject = () => (
+    // const 
     <div className="subject">
-        <Tabs className="subject-tabs" defaultActiveKey="1" onChange={callback}>
-            <TabPane className="subject-tabs-tabpane" tab="Html" key="1">
-            <Card
-                hoverable
-                style={{ width: 160 }}
-                cover={<img alt="example" src="../static/image/html.png" />}
-            >
-                <Meta title="Europe Street beat" description="www.instagram.com" />
-            </Card>
-            <List
-                itemLayout="horizontal"
-                dataSource={data}
-                renderItem={item => (
-                <List.Item>
-                    <List.Item.Meta
-                    avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                    title={<a href="https://ant.design">{item.title}</a>}
-                    description="Ant Design, a design language for background applications, is refined by Ant UED Team"
-                    />
-                </List.Item>
-                )}
-            />
-            </TabPane>
-            <TabPane className="subject-tabs-tabpane" tab="JavaScript" key="2">
-            <Card
-                hoverable
-                style={{ width: 160 }}
-                cover={<img alt="example" src="../static/image/js.png" />}
-            >
-                <Meta title="Europe Street beat" description="www.instagram.com" />
-            </Card>
-            <List
-                itemLayout="horizontal"
-                dataSource={data}
-                renderItem={item => (
-                <List.Item>
-                    <List.Item.Meta
-                    avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                    title={<a href="https://ant.design">{item.title}</a>}
-                    description="Ant Design, a design language for background applications, is refined by Ant UED Team"
-                    />
-                </List.Item>
-                )}
-            />
-            </TabPane>
-            <TabPane className="subject-tabs-tabpane" tab="Node" key="3">
-            <Card
-                hoverable
-                style={{ width: 160 }}
-                cover={<img alt="example" src="../static/image/node.png" />}
-            >
-                <Meta title="Europe Street beat" description="www.instagram.com" />
-            </Card>
-            <List
-                itemLayout="horizontal"
-                dataSource={data}
-                renderItem={item => (
-                <List.Item>
-                    <List.Item.Meta
-                    avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                    title={<a href="https://ant.design">{item.title}</a>}
-                    description="Ant Design, a design language for background applications, is refined by Ant UED Team"
-                    />
-                </List.Item>
-                )}
-            />
-            </TabPane>
-            <TabPane className="subject-tabs-tabpane" tab="Vue" key="4">
-            <Card
-                hoverable
-                style={{ width: 160 }}
-                cover={<img alt="example" src="../static/image/vue.png" />}
-            >
-                <Meta title="Europe Street beat" description="www.instagram.com" />
-            </Card>
-            <List
-                itemLayout="horizontal"
-                dataSource={data}
-                renderItem={item => (
-                <List.Item>
-                    <List.Item.Meta
-                    avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                    title={<a href="https://ant.design">{item.title}</a>}
-                    description="Ant Design, a design language for background applications, is refined by Ant UED Team"
-                    />
-                </List.Item>
-                )}
-            />
-            </TabPane>
-            <TabPane className="subject-tabs-tabpane" tab="React" key="5">
-            <Card
-                hoverable
-                style={{ width: 160 }}
-                cover={<img alt="example" src="../static/image/react.png" />}
-            >
-                <Meta title="Europe Street beat" description="www.instagram.com" />
-            </Card>
-            <List
-                itemLayout="horizontal"
-                dataSource={data}
-                renderItem={item => (
-                <List.Item>
-                    <List.Item.Meta
-                    avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                    title={<a href="https://ant.design">{item.title}</a>}
-                    description="Ant Design, a design language for background applications, is refined by Ant UED Team"
-                    />
-                </List.Item>
-                )}
-            />
-            </TabPane>
-            <TabPane className="subject-tabs-tabpane" tab="Other" key="6">
-            <Card
-                hoverable
-                style={{ width: 160 }}
-                cover={<img alt="example" src="../static/image/web.png" />}
-            >
-                <Meta title="Europe Street beat" description="www.instagram.com" />
-            </Card>
-            <List
-                itemLayout="horizontal"
-                dataSource={data}
-                renderItem={item => (
-                <List.Item>
-                    <List.Item.Meta
-                    avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                    title={<a href="https://ant.design">{item.title}</a>}
-                    description="Ant Design, a design language for background applications, is refined by Ant UED Team"
-                    />
-                </List.Item>
-                )}
-            />
-            </TabPane>
+        <Tabs className="subject-tabs" defaultActiveKey="1" onChange={callback} >
+            {subList.map((item) => {
+                return (
+                    <TabPane className="subject-tabs-tabpane" tab={item.title} key={item.id}>
+                        <div className="subject-tabs-card">
+                            <Card
+                                hoverable
+                                style={{ width: 160 }}
+                                cover={<img alt={item.title} src={"../static/image/"+item.img} />}
+                            >
+                                <Meta className="subject-tabs-card-meta" title={item.title} description={item.description} />
+                            </Card>
+                        </div>
+                        <List
+                            itemLayout="horizontal"
+                            dataSource={item.child}
+                            renderItem={item => (
+                            <List.Item>
+                                <List.Item.Meta
+                                // avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                                title={<Link href={"/notes?id="+item.id}><a style={{ fontSize: 20 }}>{item.title}</a></Link>}
+                                description={item.description}
+                                />
+                            </List.Item>
+                            )}
+                        />
+                    </TabPane>
+                )
+            })}
         </Tabs>
         
     </div>

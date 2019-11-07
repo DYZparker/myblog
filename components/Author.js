@@ -4,7 +4,8 @@ import { Icon, Avatar, Divider } from 'antd'
 
 const Author = () => (
     <div className="autor">
-        <Avatar className="autor-avatar" size={100} icon="user" src="../static/image/ssw.jpg" />
+        {/* <Avatar className="autor-avatar" size={100} icon="user" src="../static/image/ssw.jpg" /> */}
+        <Avatar className="autor-avatar" size={100} icon="user" src="http://122.51.57.99:7777/image/node.png" />
         <div className="autor-content">
             <p>Web前端学习，Vue、React框架实践，个人服务器端搭建</p>
             <Divider>联系方式</Divider>

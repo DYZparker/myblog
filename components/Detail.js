@@ -1,20 +1,32 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import marked from 'marked'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/monokai-sublime.css'
 import '../static/style/components/detail.css'
 import { Row, Col, Affix } from 'antd'
 import Author from './Author'
-// import Sidenav from './Sidenav'
-// import MarkNav from 'markdown-navbar';
-import 'markdown-navbar/dist/navbar.css'
-import axios from 'axios'
+import Sidetag from './Sidetag'
+import { withRouter } from 'next/router'
+// import MarkNav from 'markdown-navbar'
+// import 'markdown-navbar/dist/navbar.css'
+// import axios from 'axios'
 
+// import appMarkdown from '../static/md/react.md'
 import appMarkdown from '../static/md/koa2.md'
 
 
-const Detail = () => {
-
+const Detail = ({router}) => {
+    // let appMarkdown = ''
+    // fetch('../static/md/koa2.md').then(data => appMarkdown = data)
+    useEffect(() => {
+        const id = router.query.id
+        console.log(id)
+        // if(id===1) {
+        //     import appMarkdown from '../static/md/react.md'
+        // }else {
+        //     import appMarkdown from '../static/md/koa2.md'
+        // }
+    })
     const renderer = new marked.Renderer();
     marked.setOptions({
         renderer: renderer, 
@@ -31,6 +43,8 @@ const Detail = () => {
       }); 
     
     let html = marked(appMarkdown)
+
+
     
     return(
         <div className="detail">
@@ -43,13 +57,14 @@ const Detail = () => {
                 </Col>
                 <Col className="detail-right" xs={0} sm={0} md={0} lg={5} xl={4}>
                     <Author />
-                    {/* <Sidenav /> */}
+                    <Sidetag />
                     <Affix className="detail-affix" offsetTop={50}>
                         <div className="detail-nav">
                             <div className="detail-nav-title">文章目录</div>
                             {/* <MarkNav
                                 className="detail-article-menu"
                                 source={appMarkdown}
+                                headingTopOffset={80}
                                 ordered={false}
                             /> */}
                         </div>
@@ -60,4 +75,4 @@ const Detail = () => {
     )
 }
 
-export default Detail
+export default withRouter(Detail)
